@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY TO-DO APP</title>
+    <link rel="stylesheet" href="designs.css">
+</head>
+<body>
+  <div class="phone-container">
+    <div class="phone-frame">
+      <div class="phone-header">
+        <h1>MY TO-DO APP</h1>
+      </div>
+      
+      <div class="phone-body">
+        <div class="input-section">
+          <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button id="addTaskBtn">+</button>
+          </div>
+          <div style="display: flex; gap: 10px;">
+            <button id="clearAllBtn">Clear All</button>
+            <button id="fetchDataBtn">📥 Fetch Todos</button>
+          </div>
+        </div>
+        
+        <p id="taskCount"></p>
+        <p id="emptyMessage" class="empty-message">📝 No task has been added yet</p>
+        
+        <ul id="taskList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

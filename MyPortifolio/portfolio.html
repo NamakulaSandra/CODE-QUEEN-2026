@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Code Queen</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 24px;
+            color: #667eea !important;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            margin-top: 70px;
+        }
+        
+        .hero-section h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        /* Card Styling */
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+        
+        .project-card h3 {
+            color: #667eea;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        
+        .project-card p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        /* Skills Section */
+        .skill-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 8px;
+            font-weight: 600;
+        }
+        
+        /* Contact Section */
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .contact-card i {
+            font-size: 40px;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .contact-card h4 {
+            color: #667eea;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .contact-card p {
+            color: #666;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 36px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">💻 NAMAKULA SANDRA MWASE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Showcasing my projects, skills, and learning journey</p>
+            <a href="#projects" class="btn btn-light btn-lg">Explore My Work</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+                <p>Showcasing my latest work and creations</p>
+            </div>
+
+            <div class="row">
+                <!-- TO-DO App Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <h3><i class="fas fa-list-check"></i> TO-DO App</h3>
+                        <p>A fully functional task management application with local storage integration. Features include adding, editing, and deleting tasks, plus the ability to fetch external todos from an API.</p>
+                        <ul style="color: #666; margin-bottom: 20px;">
+                            <li>✅ Add/Edit/Delete tasks</li>
+                            <li>✅ Local storage persistence</li>
+                            <li>✅ Fetch external todos</li>
+                            <li>✅ Task counter</li>
+                        </ul>
+                        <a href="../ToDo/TO-DO%20LIST/index.html" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> View App
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Website Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <h3><i class="fas fa-globe"></i> Website</h3>
+                        <p>A beautifully designed responsive website showcasing modern web design principles and best practices for user experience and engagement.</p>
+                        <ul style="color: #666; margin-bottom: 20px;">
+                            <li>✅ Responsive Design</li>
+                            <li>✅ Modern UI/UX</li>
+                        </ul>
+                        <a href="../Salonwebsite/index.html" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> View Website
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact List Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <h3><i class="fas fa-address-book"></i> Contact List</h3>
+                        <p>An organized contact management system to store, view, and manage your important contacts with ease and efficiency.</p>
+                        <ul style="color: #666; margin-bottom: 20px;">
+                            <li>✅ Add Contacts</li>
+                            <li>✅ Search Function</li>
+                            <li>✅ Edit Contacts</li>
+                            <li>✅ Delete Contacts</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary" onclick="alert('Contact List coming soon!')">
+                            <i class="fas fa-clock"></i> Coming Soon
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Learning Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>What I've Learned</h2>
+                <p>Technologies and concepts I've mastered</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4 style="color: #667eea; font-weight: 700; margin-bottom: 20px;">Frontend Technologies</h4>
+                    <div class="mb-4">
+                        <span class="skill-badge">HTML</span>
+                        <span class="skill-badge">CSS</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">Bootstrap</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h4 style="color: #667eea; font-weight: 700; margin-bottom: 20px;">Concepts & Tools</h4>
+                    <div class="mb-4">
+                        <span class="skill-badge">DOM Manipulation</span>
+                        <span class="skill-badge">Fetch API</span>
+                        <span class="skill-badge">Local Storage</span>
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">VS Code</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md-6 mb-4">
+                    <div class="project-card">
+                        <h4 style="color: #667eea;">📚 Currently Learning</h4>
+                        <ul style="color: #666;">
+                            <li>JavaScript</li>
+                            <li>Programming</li>
+                            <li>Web APIs</li>
+                            <li>Web Design Principles</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="project-card">
+                        <h4 style="color: #667eea;">🎯 Goals & Next Steps</h4>
+                        <ul style="color: #666;">
+                            <li>Master Frontend Frameworks</li>
+                            <li>Learn Backend Development</li>
+                            <li>Build Full-Stack Projects</li>
+                            <li>Become a Professional Developer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Let's connect and collaborate</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <i class="fas fa-text"></i>
+                        <h4>Name</h4>
+                        <p>Namakula Sandra Mwase</p>
+                    </div>
+                </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>sandranamakula553@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h4>Phone</h4>
+                        <p>+256789655672</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Location</h4>
+                        <p>Kampala, Uganda</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <h4 style="color: #333; margin-bottom: 20px;">Follow Me On Social Media</h4>
+                <a href="#" class="btn btn-outline-primary btn-lg me-2" style="color: #667eea; border-color: #667eea;">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="#" class="btn btn-outline-primary btn-lg me-2" style="color: #667eea; border-color: #667eea;">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="#" class="btn btn-outline-primary btn-lg" style="color: #667eea; border-color: #667eea;">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Code Queen. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #667eea;"></i> for the web</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
